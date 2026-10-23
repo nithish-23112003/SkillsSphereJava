@@ -1,0 +1,55 @@
+```java
+package com.LMS.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestHeader;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.LMS.entity.Admin;
+import com.LMS.service.AdminService;
+import com.LMS.util.RequestResponse;
+
+@RestController
+@RequestMapping("/admin")
+public class AdminController {
+
+    @Autowired
+    private AdminService service;
+
+    @PostMapping
+    public ResponseEntity<RequestResponse<Admin>> add(@RequestHeader("token") String token, @RequestBody Admin a) {
+        return service.add(token, a);
+    }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<RequestResponse<Admin>> findAdmin(@PathVariable int id) {
+        return service.findAdmin(id);
+    }
+
+    @GetMapping("/all")
+    public ResponseEntity<RequestResponse<List<Admin>>> findAllAdmin(@RequestHeader("token") String token) {
+        return service.findAllUser(token);
+    }
+
+    @PutMapping
+    public ResponseEntity<RequestResponse<Admin>> updateAdmin(@RequestHeader("token") String token, @RequestBody Admin a) {
+        return service.updateAdmin(a, token);
+    }
+
+    @DeleteMapping
+    public ResponseEntity<RequestResponse<Admin>> removeAdmin(@RequestHeader("token") String token, @RequestParam String email) {
+        return service.removeAdmin(token, email);
+    }
+}
+```

@@ -1,0 +1,139 @@
+.course-content-page {
+    min-height: 90vh;
+    padding: 30px 50px;
+    background: #f5f6f8;
+}
+
+.course-header {
+    margin-bottom: 25px;
+}
+
+.course-header h2 {
+    margin: 0;
+    font-size: 28px;
+    color: #222;
+}
+
+.course-layout {
+    display: flex;
+    gap: 25px;
+    align-items: flex-start;
+}
+
+.content-container {
+    width: 55%;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.course-section {
+    border-bottom: 1px solid #ddd;
+}
+
+.section-header {
+    display: flex;
+    align-items: center;
+    padding: 16px 20px;
+    background: #20242a;
+    color: white;
+    cursor: pointer;
+}
+
+.section-header:hover {
+    background: #292e35;
+}
+
+.section-icon {
+    width: 50px;
+    font-size: 24px;
+}
+
+.section-title {
+    flex: 1;
+}
+
+.section-title h3 {
+    margin: 0;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.section-title p {
+    margin: 5px 0 0;
+    color: #ccc;
+    font-size: 13px;
+}
+
+.arrow {
+    font-size: 13px;
+}
+
+.video-list {
+    background: #fff;
+}
+
+.video-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 25px;
+    border-top: 1px solid #ddd;
+    cursor: pointer;
+}
+
+.video-item:hover {
+    background: #f1f3f5;
+}
+
+.video-icon {
+    font-size: 18px;
+}
+
+.video-title {
+    font-size: 15px;
+    color: #333;
+}
+
+.video-player-container {
+    width: 45%;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    position: relative;
+}
+
+.video-player-container h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    padding-right: 35px;
+    font-size: 20px;
+}
+
+.video-player-container video {
+    width: 100%;
+    max-height: 450px;
+    border-radius: 6px;
+}
+
+.close-video {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    border: none;
+    background: transparent;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.close-video:hover {
+    color: red;
+}
+
+.course-loading {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 18px;
+}

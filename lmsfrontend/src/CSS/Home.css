@@ -1,0 +1,39 @@
+.home-section {
+    min-height: 55vh;
+    display: flex;
+    align-items: center;
+    padding: 50px 8%;
+    background-color: #eef4ff;
+}
+
+.home-content {
+    max-width: 650px;
+}
+
+.home-content h1 {
+    font-size: 45px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.home-content p {
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+.home-card {
+    background-color: white;
+    padding: 30px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    height: 100%;
+}
+
+.home-card h4 {
+    margin-bottom: 15px;
+}
+
+.home-card p {
+    color: #666;
+}

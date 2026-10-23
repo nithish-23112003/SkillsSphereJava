@@ -1,0 +1,52 @@
+package CollectionsEample;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+
+public class Student implements Comparable {
+	 int age;
+	 String name;
+	 public int compareTo(Object o) {
+		 return this.age-((Student)o).age;
+	 }
+	 public Student(int age,String name) {
+		 this.age=age;
+		 this.name=name;
+	 }
+	 public String toString() {
+		 return age+"."+name;
+	 }
+	
+	public static void main(String[] args) {
+		ArrayList<Integer> a=new ArrayList<>();
+	    a.add(30);
+	    a.add(20);
+	    a.add(10);
+	    Collections.sort(a);
+	    Collections.reverse(a);
+	    System.out.println(a);
+	    ArrayList<Student> a1=new ArrayList<>();
+	    a1.add(new Student(40,"j"));
+	    a1.add(new Student(20,"nn"));
+	    Collections.sort(a1);
+	    System.out.println(a1);
+	    Comparator c=(s,s1)->{
+	    	return ((Student)s).name.compareTo(((Student)s1).name)
+	    }
+	    Collections.sort(a1,new Comparator<Student>() {
+	    	public int compare(Student s,Student s1) {
+	  		  return s.name.compareTo(s1.name);
+	  	  };
+	    });
+	    System.out.println(a1);
+	}
+    
+}
+//class SortByName implements Comparator<Student>{
+//	  public int compare(Student s,Student s1) {
+//		  return s.name.compareTo(s1.name);
+//	  }
+//}
+
+

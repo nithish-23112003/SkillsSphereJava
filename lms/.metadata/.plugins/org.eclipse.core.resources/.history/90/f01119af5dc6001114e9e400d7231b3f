@@ -1,0 +1,26 @@
+package CollectionsEample;
+
+import java.util.ArrayList;
+import java.util.Collections;
+
+public class Student implements Comparable {
+	 int age;
+	 public int compareTo(Object o) {
+		 return this.age-((Student)o).age;
+	 }
+	 public Student(int age) {
+		 this.age=age;
+	 }
+	
+	public static void main(String[] args) {
+		ArrayList<Integer> a=new ArrayList<>();
+	    a.add(30);
+	    a.add(20);
+	    a.add(10);
+	    Collections.sort(a);
+	    Collections.reverse(a);
+	    System.out.println(a);
+	    Collections.sort(new Student());
+	}
+    
+}

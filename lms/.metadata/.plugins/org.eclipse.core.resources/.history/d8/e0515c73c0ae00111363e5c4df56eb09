@@ -1,0 +1,43 @@
+```java
+package com.LMS.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestHeader;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.LMS.entity.Result;
+import com.LMS.service.ResultService;
+import com.LMS.util.RequestResponse;
+
+@RestController
+@RequestMapping("/result")
+public class ResultController {
+
+    @Autowired
+    private ResultService service;
+
+    @PostMapping
+    public ResponseEntity<RequestResponse<Result>> addResult(@RequestHeader("token") String token, @RequestBody Result r) {
+        return service.addResult(r, token);
+    }
+
+    @GetMapping
+    public ResponseEntity<RequestResponse<List<Result>>> getAllResult() {
+        return service.addResult();
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<RequestResponse<Result>> removeResult(@RequestHeader("token") String token, @PathVariable int id) {
+        return service.removeResult(token, id);
+    }
+}
+```

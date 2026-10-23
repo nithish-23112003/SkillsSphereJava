@@ -1,0 +1,44 @@
+.about-page {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.about-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.about-header h1 {
+    margin-bottom: 10px;
+}
+
+.about-header p {
+    color: #666;
+}
+
+.about-section {
+    background-color: white;
+    padding: 30px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin-bottom: 25px;
+}
+
+.about-section p {
+    color: #666;
+    line-height: 1.7;
+    margin-top: 15px;
+}
+
+.about-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 25px;
+    height: 100%;
+}
+
+.about-card p {
+    color: #666;
+    margin-top: 10px;
+}

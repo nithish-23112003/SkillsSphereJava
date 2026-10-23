@@ -1,0 +1,45 @@
+.result-page {
+    padding: 45px 5%;
+}
+
+.result-page h1 {
+    margin-bottom: 10px;
+}
+
+.result-heading {
+    color: #666;
+    margin-bottom: 35px;
+}
+
+.result-container {
+    display: flex;
+    gap: 25px;
+    overflow-x: auto;
+    padding: 10px;
+}
+
+.result-card {
+    min-width: 220px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+}
+
+.result-image {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.result-card h5 {
+    margin-bottom: 8px;
+}
+
+.result-card p {
+    color: #2563eb;
+    font-weight: 500;
+}

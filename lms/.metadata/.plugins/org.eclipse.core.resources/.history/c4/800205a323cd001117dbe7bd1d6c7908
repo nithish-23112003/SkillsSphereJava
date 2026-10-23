@@ -1,0 +1,16 @@
+package FileHandling;
+
+import java.io.File;
+import java.io.IOException;
+
+public class Files {
+   public static void main(String[] args) throws IOException {
+	File f=new File("data1.txt");
+	if(f.createNewFile()) {
+		System.out.println("file is created");
+	}else {
+		System.out.println("file already exists");
+	}
+	System.out.println(f.getAbsolutePath());
+}
+}

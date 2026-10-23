@@ -1,0 +1,5 @@
+package com.LMS.controller;
+
+public class CourseInfoController {
+
+}

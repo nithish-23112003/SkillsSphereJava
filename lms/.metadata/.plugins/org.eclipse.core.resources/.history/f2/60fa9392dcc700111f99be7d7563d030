@@ -1,0 +1,20 @@
+package Maps;
+
+import java.util.Map;
+import java.util.TreeMap;
+
+public class Mapping {
+	public static void main(String[] args) {
+		Map<String,String> map=new TreeMap<>();
+		map.put("ab", "a");
+		map.put("a", "p");
+		map.put("c",map.getOrDefault("c","z"));
+		map.put("a","gg");
+//		map.put(null, null);
+//		map.put(null, null);
+		map.forEach((key,value)->{
+			System.out.println(key+" "+value);
+		});
+	}
+
+}
